@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Relacoes Maxilomandibulares - Prótese Total | Guia 5º Ano</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,900&family=Newsreader:ital,opsz@0,6..72;1,6..72&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f3ede1;
+  --paper-2:#ece3d3;
+  --ink:#1c2624;
+  --ink-soft:#3d4a47;
+  --teal:#0f4843;
+  --teal-d:#0a302c;
+  --teal-l:#1d6b62;
+  --coral:#d9603a;
+  --coral-d:#b94a28;
+  --gold:#c79a3e;
+  --green-ok:#2f7d5b;
+  --red-no:#b03a30;
+  --line:#cdbfa8;
+  --shadow:0 18px 40px -22px rgba(14,42,38,.55);
+  --r:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:
+    radial-gradient(1200px 600px at 80% -5%, rgba(199,154,62,.16), transparent 60%),
+    radial-gradient(900px 500px at -10% 10%, rgba(29,107,98,.13), transparent 55%),
+    var(--paper);
+  color:var(--ink);
+  font-family:"Sora",system-ui,sans-serif;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px;position:relative;z-index:1}
+
+/* HEADER */
+header.top{
+  position:sticky;top:0;z-index:50;
+  backdrop-filter:blur(10px);
+  background:rgba(243,237,225,.82);
+  border-bottom:1px solid var(--line);
+}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
+.brand{display:flex;align-items:center;gap:11px;font-family:"Fraunces";font-weight:600;font-size:1.05rem;color:var(--teal-d);letter-spacing:.2px}
+.brand .dot{width:32px;height:32px;border-radius:9px;background:var(--teal);display:grid;place-items:center;color:#f3ede1;font-family:"Fraunces";font-weight:900;font-size:1.05rem;box-shadow:var(--shadow)}
+nav.menu{display:flex;gap:4px;flex-wrap:wrap}
+nav.menu a{
+  text-decoration:none;color:var(--ink-soft);font-size:.82rem;font-weight:600;
+  padding:7px 13px;border-radius:99px;transition:.2s;letter-spacing:.3px
+}
+nav.menu a:hover{background:var(--paper-2);color:var(--teal-d)}
+
+/* HERO */
+.hero{padding:62px 0 30px;position:relative}
+.eyebrow{font-size:.74rem;letter-spacing:.32em;text-transform:uppercase;color:var(--coral-d);font-weight:700;margin-bottom:18px}
+.hero h1{
+  font-family:"Fraunces";font-weight:900;line-height:.98;
+  font-size:clamp(2.5rem,6.4vw,4.6rem);color:var(--teal-d);letter-spacing:-.01em;
+}
+.hero h1 em{font-style:italic;color:var(--coral)}
+.hero p.lead{
+  font-family:"Newsreader";font-size:clamp(1.05rem,2vw,1.35rem);
+  color:var(--ink-soft);max-width:62ch;margin-top:22px;line-height:1.5
+}
+.stats{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+.stat{
+  background:#fff8ec;border:1px solid var(--line);border-radius:var(--r);
+  padding:16px 20px;min-width:118px;box-shadow:var(--shadow)
+}
+.stat b{display:block;font-family:"Fraunces";font-weight:900;font-size:2rem;color:var(--teal);line-height:1}
+.stat span{font-size:.74rem;text-transform:uppercase;letter-spacing:.14em;color:var(--ink-soft);font-weight:600}
+
+.note{
+  margin-top:30px;border-left:4px solid var(--gold);background:rgba(199,154,62,.1);
+  padding:14px 18px;border-radius:0 12px 12px 0;font-size:.9rem;color:var(--ink-soft)
+}
+.note b{color:var(--teal-d)}
+
+/* SECTION HEADINGS */
+section{padding:54px 0 18px;scroll-margin-top:78px}
+.shead{display:flex;align-items:baseline;gap:14px;margin-bottom:8px;flex-wrap:wrap}
+.shead .num{font-family:"Fraunces";font-weight:900;font-size:1rem;color:var(--coral)}
+.shead h2{font-family:"Fraunces";font-weight:600;font-size:clamp(1.7rem,3.5vw,2.5rem);color:var(--teal-d)}
+.sdesc{color:var(--ink-soft);font-family:"Newsreader";font-size:1.05rem;max-width:64ch;margin-bottom:26px}
+
+/* MAPAS MENTAIS */
+.mapgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:22px}
+.map{
+  background:linear-gradient(155deg,var(--teal-d),var(--teal));
+  border-radius:20px;padding:24px;color:#eef3ef;box-shadow:var(--shadow);
+  position:relative;overflow:hidden
+}
+.map::after{content:"";position:absolute;right:-40px;top:-40px;width:150px;height:150px;border-radius:50%;background:rgba(199,154,62,.16)}
+.map h3{font-family:"Fraunces";font-weight:600;font-size:1.18rem;margin-bottom:4px;position:relative}
+.map .central{
+  display:inline-block;margin:6px 0 16px;font-size:.7rem;font-weight:700;letter-spacing:.16em;
+  text-transform:uppercase;color:#1c2624;background:var(--gold);padding:5px 12px;border-radius:99px
+}
+.branch{margin-bottom:13px;position:relative;padding-left:14px;border-left:2px solid rgba(199,154,62,.45)}
+.branch>.bno{font-weight:700;font-size:.93rem;color:#fff3da;margin-bottom:5px;display:block}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips span{
+  font-size:.76rem;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);
+  padding:3px 10px;border-radius:8px;color:#dfe9e4
+}
+
+/* FLASHCARDS */
+.fctrl{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:20px}
+.btn{
+  font-family:"Sora";font-weight:600;font-size:.82rem;cursor:pointer;border:none;
+  padding:10px 18px;border-radius:99px;transition:.18s;letter-spacing:.2px
+}
+.btn.primary{background:var(--teal);color:#f3ede1}
+.btn.primary:hover{background:var(--teal-d)}
+.btn.ghost{background:transparent;border:1.5px solid var(--line);color:var(--teal-d)}
+.btn.ghost:hover{border-color:var(--teal);background:var(--paper-2)}
+.fcount{font-size:.82rem;color:var(--ink-soft);font-weight:600}
+.flashgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:16px}
+.flip{perspective:1200px;height:178px;cursor:pointer}
+.flip-in{position:relative;width:100%;height:100%;transition:transform .55s cubic-bezier(.4,.2,.2,1);transform-style:preserve-3d}
+.flip.flipped .flip-in{transform:rotateY(180deg)}
+.face{
+  position:absolute;inset:0;backface-visibility:hidden;border-radius:16px;padding:20px;
+  display:flex;flex-direction:column;justify-content:center;box-shadow:var(--shadow);border:1px solid var(--line)
+}
+.face.front{background:#fff8ec}
+.face.front .tag{font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--coral-d);font-weight:700;margin-bottom:10px}
+.face.front .term{font-family:"Fraunces";font-weight:600;font-size:1.32rem;color:var(--teal-d);line-height:1.15}
+.face.front .hint{margin-top:auto;font-size:.72rem;color:var(--ink-soft);opacity:.8}
+.face.back{background:linear-gradient(160deg,var(--teal),var(--teal-l));color:#eef3ef;transform:rotateY(180deg)}
+.face.back .ans{font-family:"Newsreader";font-size:1rem;line-height:1.45}
+
+/* QUESTOES */
+.qfilter{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.fchip{
+  font-size:.76rem;font-weight:600;cursor:pointer;border:1.5px solid var(--line);
+  background:transparent;color:var(--ink-soft);padding:7px 14px;border-radius:99px;transition:.16s
+}
+.fchip:hover{border-color:var(--teal-l)}
+.fchip.active{background:var(--teal);border-color:var(--teal);color:#f3ede1}
+.scorebar{
+  position:sticky;top:60px;z-index:30;background:rgba(243,237,225,.92);backdrop-filter:blur(8px);
+  border:1px solid var(--line);border-radius:14px;padding:12px 18px;margin-bottom:22px;
+  display:flex;align-items:center;gap:18px;flex-wrap:wrap;box-shadow:var(--shadow)
+}
+.scorebar .lbl{font-size:.78rem;font-weight:600;color:var(--ink-soft)}
+.scorebar b{font-family:"Fraunces";font-weight:900;color:var(--teal);font-size:1.1rem}
+.track{flex:1;min-width:140px;height:9px;background:var(--paper-2);border-radius:99px;overflow:hidden}
+.track>i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--teal),var(--gold));transition:width .4s}
+.qlist{display:flex;flex-direction:column;gap:18px}
+.qcard{
+  background:#fff8ec;border:1px solid var(--line);border-radius:18px;padding:22px 24px;box-shadow:var(--shadow)
+}
+.qtop{display:flex;align-items:center;gap:10px;margin-bottom:13px;flex-wrap:wrap}
+.qnum{font-family:"Fraunces";font-weight:900;color:var(--coral);font-size:1.05rem}
+.qtema{font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--teal-d);background:var(--paper-2);padding:4px 11px;border-radius:99px}
+.qtext{font-family:"Newsreader";font-size:1.16rem;color:var(--ink);line-height:1.4;margin-bottom:16px}
+.opts{display:flex;flex-direction:column;gap:9px}
+.opt{
+  display:flex;gap:12px;align-items:flex-start;text-align:left;cursor:pointer;
+  background:#fffdf7;border:1.5px solid var(--line);border-radius:12px;padding:12px 15px;
+  font-family:"Sora";font-size:.92rem;color:var(--ink);transition:.16s;width:100%
+}
+.opt:hover:not(:disabled){border-color:var(--teal-l);transform:translateX(2px)}
+.opt .key{
+  flex:none;width:24px;height:24px;border-radius:7px;background:var(--teal);color:#f3ede1;
+  font-weight:700;font-size:.8rem;display:grid;place-items:center;margin-top:1px
+}
+.opt:disabled{cursor:default}
+.opt.correct{background:rgba(47,125,91,.13);border-color:var(--green-ok)}
+.opt.correct .key{background:var(--green-ok)}
+.opt.wrong{background:rgba(176,58,48,.1);border-color:var(--red-no)}
+.opt.wrong .key{background:var(--red-no)}
+.opt.dim{opacity:.55}
+.feedback{margin-top:16px;border-radius:12px;overflow:hidden;border:1px solid var(--line);display:none}
+.feedback.show{display:block;animation:fade .35s ease}
+@keyframes fade{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+.fb-com{padding:14px 16px;background:var(--paper-2);font-size:.92rem;color:var(--ink-soft)}
+.fb-com b{color:var(--teal-d)}
+.fb-dica{padding:12px 16px;background:rgba(199,154,62,.16);font-size:.88rem;color:var(--ink-soft);display:flex;gap:9px}
+.fb-dica .ic{flex:none}
+.fb-dica b{color:var(--coral-d)}
+.empty{padding:40px;text-align:center;color:var(--ink-soft);font-family:"Newsreader";font-size:1.1rem}
+
+footer{padding:48px 0 60px;color:var(--ink-soft);font-size:.82rem;border-top:1px solid var(--line);margin-top:40px}
+footer b{color:var(--teal-d);font-family:"Fraunces"}
+.toTop{position:fixed;right:20px;bottom:20px;z-index:60;width:46px;height:46px;border-radius:50%;background:var(--teal);color:#f3ede1;border:none;cursor:pointer;font-size:1.2rem;box-shadow:var(--shadow);opacity:0;transition:.25s;pointer-events:none}
+.toTop.show{opacity:1;pointer-events:auto}
+@media(max-width:640px){
+  .scorebar{top:56px}
+  nav.menu a{padding:6px 9px;font-size:.74rem}
+  .hero{padding:40px 0 20px}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap topbar">
+    <div class="brand"><span class="dot">P</span> Prótese Total · 5º Ano</div>
+    <nav class="menu">
+      <a href="#inicio">Início</a>
+      <a href="#mapas">Mapas Mentais</a>
+      <a href="#flashcards">Flashcards</a>
+      <a href="#questoes">100 Questões</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" id="inicio">
+  <section class="hero">
+    <div class="eyebrow">Relações Maxilomandibulares</div>
+    <h1>Bases de prova, <em>DVO/RC</em> e reabilitação em prótese total</h1>
+    <p class="lead">Guia interativo de revisão: registre a dimensão vertical, domine a relação cêntrica, oriente os planos estéticos e selecione os dentes — com mapas mentais, flashcards e um banco de 100 questões comentadas.</p>
+    <div class="stats">
+      <div class="stat"><b>100</b><span>Questões comentadas</span></div>
+      <div class="stat"><b>30</b><span>Flashcards</span></div>
+      <div class="stat"><b>6</b><span>Mapas mentais</span></div>
+      <div class="stat"><b>9</b><span>Temas-chave</span></div>
+    </div>
+    <div class="note">
+      <b>Como usar &amp; limitações:</b> as questões foram construídas a partir da sua apostila e expandidas com conhecimento padrão de prótese total/oclusão. Use como reforço — a referência para a prova é o material do seu professor. Pontos de divergência entre escolas (ex.: posição condilar da RC) seguem a definição contemporânea (ântero-superior) e estão sinalizados nos comentários.
+    </div>
+  </section>
+
+  <section id="mapas">
+    <div class="shead"><span class="num">01</span><h2>Mapas Mentais</h2></div>
+    <p class="sdesc">Estrutura hierárquica dos seis blocos centrais da etapa de relações maxilomandibulares. Use-os como visão geral antes de mergulhar nas questões.</p>
+    <div class="mapgrid" id="mapgrid"></div>
+  </section>
+
+  <section id="flashcards">
+    <div class="shead"><span class="num">02</span><h2>Flashcards</h2></div>
+    <p class="sdesc">Clique no cartão para revelar a resposta. Use o embaralhar para treinar recuperação ativa (active recall) e o virar tudo para conferência rápida.</p>
+    <div class="fctrl">
+      <button class="btn primary" id="shuffle">↻ Embaralhar</button>
+      <button class="btn ghost" id="flipAll">Virar todos</button>
+      <button class="btn ghost" id="resetCards">Resetar</button>
+      <span class="fcount" id="fcount"></span>
+    </div>
+    <div class="flashgrid" id="flashgrid"></div>
+  </section>
+
+  <section id="questoes">
+    <div class="shead"><span class="num">03</span><h2>100 Questões Comentadas</h2></div>
+    <p class="sdesc">Filtre por tema, responda e veja na hora o gabarito, o comentário técnico e a dica/mnemônico. Sua pontuação aparece na barra de progresso.</p>
+    <div class="qfilter" id="qfilter"></div>
+    <div class="scorebar">
+      <span class="lbl">Acertos <b id="hits">0</b>/<b id="answered">0</b></span>
+      <span class="lbl">Aproveitamento <b id="pct">0%</b></span>
+      <div class="track"><i id="trackfill"></i></div>
+      <button class="btn ghost" id="resetQ">Reiniciar</button>
+    </div>
+    <div class="qlist" id="qlist"></div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <b>Prótese Total · 5º Ano</b> — material de estudo gerado a partir da apostila de relações maxilomandibulares.<br>
+  Conteúdo educacional de revisão. Confira sempre com a bibliografia e as anotações da sua disciplina.
+</footer>
+
+<button class="toTop" id="toTop" aria-label="Voltar ao topo">↑</button>
+
+<script>
+const QUESTOES = [{"tema": "Dimensao Vertical", "q": "A Dimensao Vertical de Oclusao (DVO) e definida como:", "a": ["A altura do terco inferior da face com a musculatura em repouso", "A altura do terco inferior da face com os dentes em maxima intercuspidacao/contato oclusal", "A distancia entre os condilos em relacao centrica", "O espaco interoclusal fisiologico durante a fonacao"], "c": 1, "com": "A DVO e a altura do terco inferior da face quando os dentes (ou rodetes) estao em contato oclusal. E uma medida vertical estatica de oclusao, distinta da DVR (repouso).", "dica": "DVO = dentes em Oclusao (em Contato). DVR = Repouso."}, {"tema": "Dimensao Vertical", "q": "A Dimensao Vertical de Repouso (DVR) caracteriza-se por:", "a": ["Maximo contato dentario com forca de mordida", "Posicao postural mandibular sem contato dentario, com musculatura em equilibrio tonico", "Posicao condilar mais retruida possivel", "Contato apenas dos dentes anteriores"], "c": 1, "com": "A DVR e uma posicao postural fisiologica mantida pelo tonus muscular em equilibrio (musculos elevadores e depressores), sem contato dentario. E geralmente maior que a DVO.", "dica": "Repouso = sem contato + tonus em equilibrio."}, {"tema": "Dimensao Vertical", "q": "A relacao matematica entre DVR, DVO e EFL e:", "a": ["DVO = DVR + EFL", "DVO = DVR - EFL", "DVR = DVO - EFL", "EFL = DVR + DVO"], "c": 1, "com": "Como a DVR e maior que a DVO pela existencia do espaco funcional livre, subtrai-se o EFL da DVR para obter a DVO: DVO = DVR - EFL.", "dica": "A boca em repouso e mais 'aberta' que em oclusao -> tira o EFL."}, {"tema": "Dimensao Vertical", "q": "O Espaco Funcional Livre (EFL) corresponde a:", "a": ["Espaco entre lingua e palato", "Distancia interoclusal entre os dentes quando a mandibula esta em repouso fisiologico", "Espaco do corredor bucal", "Folga entre a base e o rebordo"], "c": 1, "com": "O EFL (espaco interoclusal de repouso) e a folga entre as superficies oclusais quando a mandibula esta na DVR. Valor fisiologico de referencia ~3 mm (faixa 2-4 mm).", "dica": "EFL = folga entre os dentes no repouso (~3 mm)."}, {"tema": "Dimensao Vertical", "q": "O valor fisiologico medio de referencia do EFL e aproximadamente:", "a": ["1 mm", "3 mm", "6 mm", "10 mm"], "c": 1, "com": "O valor classicamente adotado e ~3 mm (faixa fisiologica 2-4 mm). Valores muito acima podem indicar DVO subestimada; muito abaixo, DVO superestimada.", "dica": "Pense em '3' como numero magico do EFL."}, {"tema": "Dimensao Vertical", "q": "Uma DVO AUMENTADA (superestimada) tende a produzir clinicamente:", "a": ["Aspecto envelhecido e queilite angular", "Tensao muscular, fadiga, trauma da mucosa, ruidos ao falar/mastigar e aspecto de 'dentes muito mostrados'", "Reducao do terco inferior", "Aumento do EFL"], "c": 1, "com": "DVO excessiva invade o EFL, gerando contatos prematuros, fadiga muscular, dor, trauma do rebordo e estetica de dentes muito expostos. O paciente pode relatar batida de dentes.", "dica": "DVO alta demais = boca 'estourando' (fadiga, batida, trauma)."}, {"tema": "Dimensao Vertical", "q": "Uma DVO DIMINUIDA (subestimada) classicamente causa:", "a": ["Mostra excessiva de dentes", "Aspecto envelhecido, aproximacao do nariz ao menton, queilite angular e perda de suporte labial", "Aumento da forca mastigatoria", "Reducao do EFL"], "c": 1, "com": "DVO baixa reduz o terco inferior, aproxima nariz e menton, dobra as comissuras (favorecendo queilite angular) e da aspecto envelhecido com perda de suporte de labios.", "dica": "DVO baixa = cara 'murcha' e envelhecida + queilite angular."}, {"tema": "Dimensao Vertical", "q": "O metodo fonetico (sons sibilantes /s/) na determinacao da DV serve para:", "a": ["Determinar a DVO de forma definitiva", "VERIFICAR a DVO estabelecida, observando o espaco de fala minimo entre os rodetes", "Registrar a relacao centrica", "Selecionar a cor dos dentes"], "c": 1, "com": "A fonetica e metodo de VERIFICACAO, nao de determinacao. Em sons como /s/ os rodetes/dentes quase se tocam (espaco de fala de ~1 mm); contato indica DVO alta, espaco amplo indica DVO baixa.", "dica": "Fonetica VERIFICA, nao determina. '/S/ = sussurro entre os dentes'."}, {"tema": "Dimensao Vertical", "q": "Na pronuncia de sons sibilantes como /s/, o espaco minimo de fala esperado entre os incisivos e de cerca de:", "a": ["0 mm (devem se tocar)", "1 mm", "5 mm", "8 mm"], "c": 1, "com": "No espaco de fala minimo (sons sibilantes), os incisivos aproximam-se sem contato, com folga de ~1 mm. Contato gera assobio/ceceio e sugere DVO/posicionamento incorretos.", "dica": "/s/ = quase encostam (1 mm)."}, {"tema": "Dimensao Vertical", "q": "Recomenda-se que a determinacao da DV seja feita:", "a": ["Por um unico metodo, o mais rapido", "Sempre combinando mais de um metodo (ex.: metrico + fisiologico), usando a fonetica como verificacao", "Apenas pela estetica facial", "Somente pelo arco gotico"], "c": 1, "com": "Nenhum metodo isolado e infalivel. A pratica recomendada e associar metodos (metrico/craniometrico + fisiologico do repouso) e verificar com fonetica e estetica.", "dica": "Nunca confie em 1 metodo so: combine + verifique."}, {"tema": "Dimensao Vertical", "q": "O metodo metrico/craniometrico de Willis para estimar a DVO baseia-se na proporcionalidade entre:", "a": ["Distancia interpupilar e largura nasal", "Distancia da pupila a comissura labial e do subnasal ao menton", "Altura da orelha e comprimento do nariz", "Largura da boca e altura da testa"], "c": 1, "com": "O compasso de Willis explora a proporcao facial: a distancia pupila-comissura tende a igualar a distancia subnasal-menton na DVO correta. E um auxiliar, sujeito a variacao individual.", "dica": "Willis: pupila-comissura ~ subnasal-menton."}, {"tema": "Dimensao Vertical", "q": "A determinacao da DVR pelo metodo fisiologico do repouso pode ser auxiliada por:", "a": ["Forcar a mordida maxima", "Deglutir e deixar a mandibula relaxar, ou comandos foneticos como repetir 'Mississippi' e relaxar", "Protruir a mandibula ao maximo", "Manter a lingua entre os dentes"], "c": 1, "com": "Apos deglutir ou pronunciar palavras e relaxar, a mandibula retorna a posicao postural de repouso (DVR), governada pelo tonus muscular. Mede-se entao a DVR para calcular a DVO.", "dica": "Deglutiu/falou e relaxou = caiu no repouso (DVR)."}, {"tema": "Dimensao Vertical", "q": "Em paciente com DVO subestimada de longa data usando protese antiga, e comum encontrar:", "a": ["Hipertrofia dos masseteres com dor", "Queilite angular, perda de suporte labial e queixa estetica de face curta", "Aumento do EFL para 1 mm", "Mostra gengival excessiva ao sorrir"], "c": 1, "com": "A perda progressiva de DVO (desgaste/reabsorcao) reduz o terco inferior, dobra as comissuras e favorece infeccao por Candida (queilite angular), alem do aspecto envelhecido.", "dica": "Protese velha + canto da boca rachado = DVO baixa."}, {"tema": "Dimensao Vertical", "q": "O ajuste da DVO em protese total e feito principalmente atuando sobre:", "a": ["A linha media", "A altura dos rodetes/plano de cera ate atingir a DVO calculada", "O corredor bucal", "A regua de Fox"], "c": 1, "com": "Apos definir DVR e EFL, ajusta-se a altura do rodete inferior (acrescentando ou removendo cera) ate que a oclusao dos rodetes corresponda a DVO planejada (DVR - EFL).", "dica": "Acerta a altura do rodete = acerta a DVO."}, {"tema": "Dimensao Vertical", "q": "Assinale a alternativa CORRETA sobre a relacao DVR x DVO:", "a": ["DVR e sempre menor que a DVO", "DVR e maior que a DVO, e a diferenca entre elas e o EFL", "DVR e igual a DVO em pacientes desdentados", "A diferenca entre DVR e DVO e a relacao centrica"], "c": 1, "com": "Por definicao, a DVR (repouso, sem contato) e maior que a DVO (contato dentario). Essa diferenca vertical e exatamente o EFL.", "dica": "Repouso > Oclusao; a diferenca = EFL."}, {"tema": "Relacao Centrica", "q": "A Relacao Centrica (RC) e definida como:", "a": ["A posicao de maxima intercuspidacao habitual (MIH)", "Uma relacao maxilomandibular puramente articular (condilo-disco em posicao antero-superior na fossa), independente do contato dentario", "A posicao mais protruida da mandibula", "A posicao em que os dentes anteriores contatam"], "c": 1, "com": "A RC e relacao articular reproduzivel, com os condilos na posicao mais antero-superior contra a vertente posterior da eminencia, com o disco interposto. NAO depende dos dentes - por isso e usada em desdentados totais.", "dica": "RC = articular pura (condilo-disco-fossa), SEM dente."}, {"tema": "Relacao Centrica", "q": "Em protese total, por que se utiliza a RC e nao a MIH como referencia?", "a": ["Porque a RC e mais estetica", "Porque o paciente desdentado nao possui dentes para definir a MIH, sendo a RC a unica posicao reproduzivel e articular", "Porque a MIH e mais retruida", "Porque a RC depende dos dentes artificiais"], "c": 1, "com": "Sem dentes naturais nao existe MIH (que e definida por contatos dentarios). A RC, por ser articular, e reproduzivel e serve de referencia para montar a oclusao da protese.", "dica": "Sem dente nao ha MIH -> usa a RC (articular)."}, {"tema": "Relacao Centrica", "q": "Entre os metodos de registro da RC, o de MAIOR precisao para casos com dificuldade de relaxamento e:", "a": ["Manipulacao bilateral", "Degluticao", "Metodo grafico (arco gotico / tracado de Gysi)", "Metodo fonetico"], "c": 2, "com": "O arco gotico (registro grafico intra ou extraoral) produz um tracado em forma de seta cujo apice marca a RC. E o metodo mais preciso e objetivo, util quando a manipulacao falha.", "dica": "Arco gotico = padrao-ouro de precisao para RC."}, {"tema": "Relacao Centrica", "q": "No tracado do arco gotico, o vertice (apice da seta) corresponde a:", "a": ["Maxima protrusao", "A posicao de Relacao Centrica", "Maxima lateralidade direita", "A DVO"], "c": 1, "com": "O apice da seta gotica (gothic arch tracing de Gysi) representa a posicao mais retruida e reproduzivel - a RC. Os lados da seta sao os movimentos de lateralidade.", "dica": "A ponta da seta gotica = RC."}, {"tema": "Relacao Centrica", "q": "A manipulacao bimanual/bilateral para registro de RC consiste em:", "a": ["Empurrar a mandibula para frente com forca", "Guiar a mandibula com movimentos suaves de pequena amplitude (charneira), apoiando o menton, ate a posicao articular reproduzivel", "Pedir mordida maxima", "Posicionar a lingua entre os dentes"], "c": 1, "com": "A manipulacao usa toque leve no menton e movimentos de pequena amplitude (eixo de rotacao/charneira) para assentar os condilos em RC, sem forca que cause defesa muscular.", "dica": "Manipula com leveza e pequena amplitude (charneira)."}, {"tema": "Relacao Centrica", "q": "O metodo fisiologico da degluticao para RC funciona porque:", "a": ["A degluticao protrui a mandibula", "A degluticao e um reflexo que posiciona a mandibula em RC de forma involuntaria", "A lingua empurra os dentes anteriores", "Aumenta a DVO"], "c": 1, "com": "Durante a degluticao, reflexos posicionam a mandibula proxima a RC. Pedindo ao paciente para deglutir e ocluir os rodetes, registra-se a posicao horizontal de forma fisiologica.", "dica": "Engolir = reflexo que joga a mandibula pra RC."}, {"tema": "Relacao Centrica", "q": "O metodo mecanico de registro de RC frequentemente emprega:", "a": ["Regua de Fox", "Um jig/dispositivo (ex.: jig de Lucia) que desocluI os posteriores e guia a mandibula", "Compasso de Willis", "Arco facial"], "c": 1, "com": "Dispositivos como o jig anterior (de Lucia) eliminam interferencias posteriores e induzem relaxamento muscular, facilitando o assentamento condilar em RC.", "dica": "Jig anterior = solta os posteriores e relaxa, achando a RC."}, {"tema": "Relacao Centrica", "q": "Sobre a posicao condilar contemporanea da RC, e CORRETO afirmar:", "a": ["Condilo em posicao postero-inferior", "Condilo em posicao antero-superior contra a vertente posterior da eminencia articular, com disco interposto", "Condilo fora da fossa", "Condilo em maxima protrusao"], "c": 1, "com": "A definicao atual (consenso protetico/oclusal) coloca os condilos em antero-superior na fossa, com o disco corretamente interposto. Definicoes antigas falavam em retruida (postero-superior) - ponto de divergencia historica.", "dica": "Atual = antero-superior (nao mais 'retruida')."}, {"tema": "Relacao Centrica", "q": "O registro de RC e utilizado no articulador para montar o modelo:", "a": ["Superior", "Inferior, em relacao ao superior previamente montado pelo arco facial", "Ambos simultaneamente sem referencia", "Nenhum modelo"], "c": 1, "com": "Primeiro o modelo superior e posicionado pelo arco facial; depois o registro de RC interpoe-se entre os rodetes para montar o modelo inferior na relacao correta.", "dica": "Arco facial -> superior; registro RC -> inferior."}, {"tema": "Relacao Centrica", "q": "Falha frequente que invalida um registro de RC e:", "a": ["Usar cera dura para o registro", "Bases de prova instaveis ou DVO incorreta no momento do registro, alem de protrusao induzida por forca excessiva", "Usar manipulacao bilateral", "Registrar com o paciente relaxado"], "c": 1, "com": "Registro de RC exige bases estaveis e DVO ja definida; forcar a mandibula gera protrusao/defesa muscular e posicao falsa. Instabilidade das bases distorce o registro.", "dica": "Base instavel + forca = RC falsa."}, {"tema": "Relacao Centrica", "q": "Diferenca essencial entre RC e MIH em dentados:", "a": ["Sao sempre coincidentes", "RC e articular e MIH e dentaria; podem coincidir (RC=MIH) ou haver deslize (RC->MIH)", "MIH e mais retruida que a RC", "RC depende dos dentes"], "c": 1, "com": "Em dentados, RC e MIH podem coincidir ou nao. Quando ha discrepancia, existe um pequeno deslize de RC para MIH. Em desdentado total, monta-se a oclusao coincidente com a RC.", "dica": "RC=articular / MIH=dental; podem ou nao coincidir."}, {"tema": "Relacao Centrica", "q": "O registro de RC com lingua no palato (postero-superior) e um metodo:", "a": ["Grafico", "Fisiologico, que orienta a mandibula a retruir suavemente", "Mecanico com jig", "De verificacao fonetica"], "c": 1, "com": "Pedir ao paciente para tocar a parte posterior do palato com a ponta da lingua induz retrusao mandibular suave, auxiliando o registro fisiologico da RC.", "dica": "Lingua la atras no palato = mandibula recua suave."}, {"tema": "Relacao Centrica", "q": "Em paciente tenso, com dificuldade de relaxar a musculatura, a melhor estrategia para RC e:", "a": ["Forcar a manipulacao", "Usar jig anterior e/ou arco gotico, e tecnicas de relaxamento", "Registrar em maxima mordida", "Ignorar e montar em protrusao"], "c": 1, "com": "Jig anterior (desoclusao posterior) e arco gotico sao indicados quando a tensao muscular impede manipulacao confiavel, pois reduzem a interferencia proprioceptiva e a defesa muscular.", "dica": "Paciente tenso -> jig + arco gotico."}, {"tema": "Relacao Centrica", "q": "O 'eixo de charneira' (eixo terminal de rotacao) relaciona-se a RC porque:", "a": ["E o eixo de protrusao", "E o eixo em torno do qual a mandibula realiza rotacao pura nos primeiros milimetros de abertura, partindo da RC", "Define a linha media", "E o eixo do plano de Camper"], "c": 1, "com": "Na RC, a abertura inicial (~20-25 mm) ocorre por rotacao pura em torno do eixo de charneira terminal. Localiza-lo permite montar o modelo no articulador de forma reproduzivel.", "dica": "Charneira = rotacao pura a partir da RC."}, {"tema": "Relacao Centrica", "q": "Cera de registro indicada para RC deve idealmente:", "a": ["Ser muito mole e permanecer plastica", "Ter rigidez/estabilidade apos resfriar para nao deformar e nao induzir deslocamento das bases", "Cobrir todo o palato", "Substituir o arco facial"], "c": 1, "com": "O material de registro deve oferecer minima resistencia ao fechamento (para nao deslocar bases) e estabilidade dimensional apos endurecer (ceras de registro/pastas zincoeugenolicas/silicones de registro).", "dica": "Mole ao morder, firme depois de frio."}, {"tema": "Planos de Orientacao", "q": "O Plano de Camper e referencia para o plano oclusal e definido (vista lateral) pela linha que vai:", "a": ["Da pupila a comissura labial", "Da asa do nariz (subnasal/ponto subnasal lateral) ao tragus da orelha", "Da glabela ao menton", "De canino a canino"], "c": 1, "com": "O plano de Camper (lateral) e tracado da asa do nariz ao tragus e e usado como referencia paralela ao plano oclusal posterior, orientando a inclinacao antero-posterior do rodete.", "dica": "Camper lateral: asa do nariz -> tragus."}, {"tema": "Planos de Orientacao", "q": "Na vista frontal, o plano oclusal anterior deve ser paralelo ao:", "a": ["Plano de Frankfurt", "Plano bipupilar (linha que une as pupilas)", "Plano sagital mediano", "Plano de Camper"], "c": 1, "com": "Frontalmente, o plano oclusal anterior deve acompanhar a linha bipupilar, garantindo simetria estetica. Lateralmente, segue o plano de Camper.", "dica": "Frente = bipupilar; Lado = Camper."}, {"tema": "Planos de Orientacao", "q": "A Regua de Fox (plano de Fox) serve para:", "a": ["Medir a DVO", "Verificar o paralelismo do plano de orientacao do rodete superior com o plano de Camper (lateral) e o bipupilar (frontal)", "Registrar a RC", "Selecionar a cor dos dentes"], "c": 1, "com": "A regua/garfo de Fox e apoiada sobre o rodete superior; suas extensoes externas permitem checar se o plano de orientacao esta paralelo a Camper (lateral) e ao bipupilar (frontal).", "dica": "Fox = confere paralelismo (Camper + bipupilar)."}, {"tema": "Planos de Orientacao", "q": "O plano de orientacao oclusal do rodete superior e ajustado para que, em vista lateral, fique paralelo a:", "a": ["Linha bipupilar", "Linha de Camper (asa do nariz-tragus)", "Linha media facial", "Curva de Spee"], "c": 1, "com": "A inclinacao antero-posterior do rodete (e do futuro plano oclusal) e guiada pela linha de Camper em vista lateral, conferida com a regua de Fox.", "dica": "Lateral = Camper."}, {"tema": "Planos de Orientacao", "q": "O plano de Frankfurt e definido por:", "a": ["Asa do nariz e tragus", "Ponto mais inferior da orbita (orbitale) e ponto superior do meato acustico externo (porion)", "Pupilas direita e esquerda", "Glabela e subnasal"], "c": 1, "com": "O plano de Frankfurt (orbitale-porion) e referencia craniometrica horizontal usada em cefalometria e montagem com arco facial. Difere do plano de Camper.", "dica": "Frankfurt = orbitale (orbita) + porion (ouvido)."}, {"tema": "Planos de Orientacao", "q": "A inclinacao do plano de Camper em relacao ao plano de Frankfurt e de aproximadamente:", "a": ["0 graus (sao paralelos)", "10-15 graus", "45 graus", "90 graus"], "c": 1, "com": "O plano de Camper forma cerca de 10-15 graus com o plano de Frankfurt. Por isso, ao usar Camper como referencia clinica, considera-se essa angulacao.", "dica": "Camper x Frankfurt ~ 10-15 graus."}, {"tema": "Planos de Orientacao", "q": "A importancia de orientar o plano oclusal pelo plano de Camper esta em:", "a": ["Definir a cor dos dentes", "Reproduzir uma inclinacao oclusal harmonica com a anatomia facial, favorecendo estetica e funcao", "Aumentar a DVO", "Registrar a RC"], "c": 1, "com": "Um plano oclusal paralelo a Camper tende a resultar em estetica e funcao mais naturais, alinhando-se a referencias anatomicas externas reproduziveis no edentulo.", "dica": "Camper guia um plano oclusal 'natural'."}, {"tema": "Planos de Orientacao", "q": "Se o plano de orientacao do rodete superior estiver inclinado (nao paralelo ao bipupilar na frente), a conduta e:", "a": ["Aumentar a DVO", "Adicionar/remover cera no rodete ate o paralelismo com a linha bipupilar (conferido pela regua de Fox)", "Trocar o material dos dentes", "Registrar a RC novamente"], "c": 1, "com": "Corrige-se a altura do rodete (cera) no lado discrepante ate a regua de Fox indicar paralelismo com a linha bipupilar (frontal) e Camper (lateral).", "dica": "Inclinou? Ajusta cera ate ficar paralelo."}, {"tema": "Planos de Orientacao", "q": "O ponto subnasal (subnasale) usado na referencia de Camper localiza-se:", "a": ["No menton", "Na juncao da columela com o labio superior / base lateral da asa do nariz", "Na glabela", "No tragus"], "c": 1, "com": "A referencia inferior do plano de Camper e tomada na asa/base do nariz (subnasal lateral), e a posterior no tragus da orelha.", "dica": "Subnasal = base do nariz."}, {"tema": "Planos de Orientacao", "q": "Sobre os planos de referencia, assinale a CORRETA:", "a": ["O plano de Camper e frontal e o bipupilar e lateral", "O plano de Camper orienta a vista lateral e o bipupilar a vista frontal do plano oclusal", "Ambos sao usados para medir EFL", "O bipupilar define a RC"], "c": 1, "com": "Camper -> orientacao antero-posterior (lateral). Bipupilar -> orientacao frontal (paralelismo dos dentes anteriores com os olhos).", "dica": "Camper = perfil; bipupilar = frente."}, {"tema": "Planos de Orientacao", "q": "A exposicao do labio/rodete em repouso ao ajustar o rodete superior deve ser de cerca de:", "a": ["0 mm", "1-2 mm de borda incisal aparecendo abaixo do labio superior em repouso", "5-6 mm", "10 mm"], "c": 1, "com": "Em repouso, 1-2 mm da borda do rodete (futuro incisivo) devem aparecer sob o labio superior, parametro estetico que tambem orienta a altura anterior do plano. Varia com idade e tipo facial.", "dica": "Repouso: ~1-2 mm de dente aparecendo."}, {"tema": "Planos de Orientacao", "q": "O garfo de Fox apoia-se sobre qual estrutura para a verificacao do plano?", "a": ["Rodete inferior", "Rodete/plano de cera superior", "Lingua", "Modelo de gesso fora da boca"], "c": 1, "com": "A regua de Fox e posicionada sobre o plano de orientacao do rodete SUPERIOR, pois e ele que define a referencia estetica e oclusal a ser transferida.", "dica": "Fox vai sobre o rodete de cima."}, {"tema": "Estetica e Linhas", "q": "A linha media dentaria, como referencia clinica, costuma coincidir com:", "a": ["O tragus", "O filtro labial (linha media facial), em ~70% dos casos", "A comissura labial", "O canino superior"], "c": 1, "com": "A linha media e marcada pelo filtro labial; estudos indicam coincidencia da linha media dental com a facial em ~70% das pessoas, sendo o restante levemente desviado.", "dica": "Linha media ~ filtro labial (so ~70% coincide)."}, {"tema": "Estetica e Linhas", "q": "A linha dos caninos (largura dos seis anteriores) e usualmente marcada a partir de:", "a": ["Distancia interpupilar", "Da comissura labial em repouso / asa do nariz, projetada sobre o rodete", "Do tragus", "Do menton"], "c": 1, "com": "Referencias como a comissura labial em repouso e a asa do nariz ajudam a posicionar a cuspide dos caninos e estimar a largura do segmento anterior (selecao do tamanho dos dentes).", "dica": "Caninos: comissura/asa do nariz como guia."}, {"tema": "Estetica e Linhas", "q": "A linha do sorriso (linha alta do labio) serve para:", "a": ["Definir a DVO", "Determinar a altura/exposicao gengival ao sorrir, orientando a altura dos dentes anteriores e a quantidade de gengiva mostrada", "Registrar a RC", "Marcar o plano de Camper"], "c": 1, "com": "A linha do sorriso indica ate onde o labio sobe ao sorrir; orienta a altura cervical dos dentes para evitar exposicao gengival excessiva (sorriso gengival) ou dentes curtos.", "dica": "Linha do sorriso = quanto de gengiva aparece."}, {"tema": "Estetica e Linhas", "q": "O corredor bucal e o espaco:", "a": ["Entre a lingua e o palato", "Entre a face vestibular dos dentes posteriores e a mucosa jugal (bochecha), visivel ao sorrir", "Entre os incisivos centrais", "Entre o rodete e o rebordo"], "c": 1, "com": "O corredor bucal (buccal corridor) e o espaco escuro lateral entre os dentes posteriores e a bochecha durante o sorriso. Contribui para naturalidade estetica.", "dica": "Corredor bucal = espaco escuro lateral no sorriso."}, {"tema": "Estetica e Linhas", "q": "Diante de um corredor bucal AMPLO (espaco lateral excessivo, dentes parecendo estreitos), a conduta no rodete e:", "a": ["Remover cera vestibular", "Acrescentar cera vestibular para projetar/alargar o arco posterior", "Reduzir a DVO", "Aumentar a linha do sorriso"], "c": 1, "com": "Corredor amplo (ex.: >2 mm) cria aspecto de boca 'estreita'. Adiciona-se cera na face vestibular do rodete para projetar os posteriores e reduzir o espaco escuro.", "dica": "Amplo = + cera (alarga o arco)."}, {"tema": "Estetica e Linhas", "q": "Diante de um corredor bucal ESTREITO (quase ausente, dentes muito proximos da bochecha), a conduta e:", "a": ["Acrescentar cera vestibular", "Remover cera vestibular para recuar levemente os posteriores", "Aumentar a DVO", "Trocar a linha media"], "c": 1, "com": "Corredor muito estreito (ex.: <0,5 mm) da aspecto artificial de 'dentadura cheia'. Remove-se cera para recuar os posteriores e recriar o espaco escuro natural.", "dica": "Estreito = - cera (recua o arco)."}, {"tema": "Estetica e Linhas", "q": "A escolha do FORMATO dos dentes anteriores frequentemente segue a teoria que relaciona o formato dental com:", "a": ["A cor da pele", "O formato da face (quadrada, ovoide, triangular) - teoria de Williams/temperamental", "O tamanho da lingua", "A idade exclusivamente"], "c": 1, "com": "A teoria de Williams associa o contorno do incisivo central invertido ao formato facial (quadrado, ovoide, triangular). E um guia estetico, nao regra absoluta.", "dica": "Williams: formato do dente espelha o formato do rosto."}, {"tema": "Estetica e Linhas", "q": "A selecao da COR dos dentes deve considerar principalmente:", "a": ["Apenas a preferencia do dentista", "Idade do paciente, cor da pele/cabelo/olhos e luz natural, evitando dentes excessivamente brancos em idosos", "O tamanho do rebordo", "A DVO"], "c": 1, "com": "Cor harmonica considera idade (dentes escurecem com a idade), tom de pele e iluminacao natural na hora da selecao. Em idosos, branco excessivo parece artificial.", "dica": "Cor: idade + pele + luz natural."}, {"tema": "Estetica e Linhas", "q": "O suporte de labio adequado em protese total depende fortemente de:", "a": ["Cor dos dentes", "Posicionamento vestibular dos dentes anteriores e do contorno (flange) da base de cera", "Plano de Camper", "Material da base de prova"], "c": 1, "com": "A projecao vestibular dos anteriores superiores e a espessura/contorno do flange dao suporte ao labio. Pouco suporte = labio 'fundo'/envelhecido; excesso = labio projetado.", "dica": "Suporte labial = posicao dos anteriores + flange."}, {"tema": "Estetica e Linhas", "q": "Ao avaliar a estetica anterior, a quantidade de incisivo superior visivel em repouso tende a, com a idade:", "a": ["Aumentar progressivamente", "Diminuir (mostra-se menos incisivo superior e mais inferior)", "Permanecer fixa", "Depender so da cor"], "c": 1, "com": "Com o envelhecimento, a exposicao do incisivo superior em repouso diminui e a do inferior aumenta - dado util para montagem com aspecto compativel com a idade.", "dica": "Mais velho = mostra menos dente de cima."}, {"tema": "Bases de Prova", "q": "A primeira verificacao clinica ao receber as bases de prova do laboratorio e:", "a": ["A cor dos dentes", "Adaptacao, retencao, estabilidade e rigidez das bases sobre os rebordos, alem da integridade do modelo", "O paralelismo com Camper", "A selecao do material dos dentes"], "c": 1, "com": "Bases instaveis ou mal adaptadas comprometem todos os registros subsequentes (DVO e RC). Verifica-se adaptacao, retencao, estabilidade e rigidez antes de prosseguir.", "dica": "Antes de tudo: a base tem que estar firme e adaptada."}, {"tema": "Bases de Prova", "q": "A funcao do rodete de cera (plano de orientacao) e:", "a": ["Substituir a protese definitiva", "Simular o volume e a posicao dos futuros dentes e arco, permitindo registrar DVO, RC e referencias esteticas", "Apenas reter a base", "Medir o EFL diretamente"], "c": 1, "com": "O rodete reproduz provisoriamente o arco dentario para se registrar relacoes (DVO/RC), planos e linhas de orientacao, e avaliar suporte labial e estetica.", "dica": "Rodete = 'dente de cera' para registrar tudo."}, {"tema": "Bases de Prova", "q": "Dimensoes medias de referencia do rodete superior na regiao anterior sao aproximadamente:", "a": ["Altura ~22 mm, largura ~10 mm", "Altura ~10-12 mm (anterior) com largura ~4-6 mm, ajustaveis ao paciente", "Altura ~30 mm", "Largura ~15 mm"], "c": 1, "com": "Valores medios servem de ponto de partida (altura anterior ~10-12 mm, reduzindo para posterior; largura ~4-6 mm anterior), sempre individualizados pela estetica e fonetica.", "dica": "Comeca por valores medios e individualiza."}, {"tema": "Bases de Prova", "q": "Uma base de prova que balanca (instavel) ao toque alternado deve ser:", "a": ["Aceita, pois melhora na protese final", "Reembasada/refeita ou ajustada antes de qualquer registro, pois compromete DVO e RC", "Usada apenas para estetica", "Cortada na borda"], "c": 1, "com": "Instabilidade indica desadaptacao; qualquer registro feito sobre base instavel sera falso. Corrige-se (reembasamento/ajuste) antes de registrar relacoes.", "dica": "Base que balanca = registro falso. Corrija antes."}, {"tema": "Bases de Prova", "q": "O material classico das bases de prova provisorias inclui:", "a": ["Porcelana", "Resina acrilica autopolimerizavel ou placa base (shellac)/fotopolimerizavel", "Metal fundido", "Cera apenas"], "c": 1, "com": "Bases de prova sao feitas de resina acrilica, placa base (shellac) ou resina fotopolimerizavel - rigidas o suficiente para suportar os rodetes e os registros.", "dica": "Base de prova: acrilico/placa base/fotopolimerizavel."}, {"tema": "Bases de Prova", "q": "Ao ajustar a altura do rodete superior anterior, o parametro estetico primario e:", "a": ["O paralelismo com Frankfurt", "A exposicao de ~1-2 mm sob o labio em repouso e o suporte labial adequado", "O EFL", "A cor dos dentes"], "c": 1, "com": "Primeiro estabelece-se a altura/projecao anterior pela estetica labial (exposicao em repouso e suporte), depois confere-se o paralelismo (Fox) e ajusta-se o restante.", "dica": "Anterior superior: mira na estetica do labio primeiro."}, {"tema": "Bases de Prova", "q": "O rodete inferior, em geral, e ajustado em altura DEPOIS do superior porque:", "a": ["E mais estetico", "O superior define o plano de orientacao e a referencia estetica; o inferior e ajustado para estabelecer a DVO em contato", "O inferior define a linha media", "O inferior define o plano de Camper"], "c": 1, "com": "Define-se primeiro o plano superior (estetica/Camper/bipupilar); o rodete inferior e entao acertado em altura para que a oclusao dos rodetes corresponda a DVO calculada.", "dica": "Superior primeiro (plano), inferior depois (DVO)."}, {"tema": "Bases de Prova", "q": "O excesso de altura no rodete que impede atingir a DVO planejada deve ser corrigido por:", "a": ["Aumento da base", "Remocao (desgaste) de cera ate a DVO correta", "Troca dos dentes", "Adicao de cera"], "c": 1, "com": "Se em contato a DVO esta acima da planejada, remove-se cera do rodete; se esta abaixo, adiciona-se cera, ate coincidir com DVR - EFL.", "dica": "DVO alta -> tira cera; DVO baixa -> poe cera."}, {"tema": "Bases de Prova", "q": "A rigidez da base de prova e importante porque:", "a": ["Melhora a cor", "Bases flexiveis deformam sob carga e falseiam DVO/RC", "Aumenta o EFL", "Define a linha media"], "c": 1, "com": "Uma base que flexiona sob pressao de mordida distorce os registros. A rigidez garante que a relacao registrada reflita a posicao real maxilomandibular.", "dica": "Base flexivel = registro deformado."}, {"tema": "Bases de Prova", "q": "Sinais de retencao adequada de uma base de prova superior incluem:", "a": ["Solta facilmente ao falar", "Resiste a tracao por selamento periferico e vedamento posterior, mantendo-se estavel a fala", "Necessita adesivo sempre", "Balanca ao toque"], "c": 1, "com": "Retencao depende do selamento periferico e do vedamento posterior (linha do 'ah'). Boa retencao permite registros confiaveis e avalia a futura adaptacao da protese.", "dica": "Boa retencao = selamento periferico + vedamento posterior."}, {"tema": "Arco Facial e Articuladores", "q": "A funcao do arco facial e:", "a": ["Registrar a RC", "Transferir a posicao do modelo SUPERIOR em relacao ao eixo de charneira/cranio para o articulador", "Medir a DVO", "Selecionar a cor dos dentes"], "c": 1, "com": "O arco facial relaciona o modelo superior ao eixo de abertura (charneira) e a referencias craniais, permitindo montar o modelo superior no articulador com a mesma relacao espacial do paciente.", "dica": "Arco facial = transfere o MODELO SUPERIOR para o articulador."}, {"tema": "Arco Facial e Articuladores", "q": "As 'auriculares' (olivas/aurale) do arco facial cinematicamente simplificado apoiam-se:", "a": ["No menton", "Nas regioes pre-auriculares/conduto auditivo externo, como referencia do eixo condilar", "Nas pupilas", "Na asa do nariz"], "c": 1, "com": "No arco facial de orientacao (tipo earbow), as olivas entram no conduto auditivo externo, usando-o como referencia aproximada da posicao condilar (eixo de charneira).", "dica": "Olivas no ouvido ~ posicao do condilo."}, {"tema": "Arco Facial e Articuladores", "q": "O Articulador Semi-Ajustavel (ASA) reproduz:", "a": ["Apenas relacoes estaticas", "Relacoes estaticas E dinamicas (movimentos), permitindo ajustar angulo da eminencia e angulo de Bennett", "Apenas a RC", "Somente a DVO"], "c": 1, "com": "O ASA simula a ATM de forma aproximada: permite ajustar guia condilar (inclinacao da eminencia) e angulo de Bennett, reproduzindo movimentos protrusivos e laterais, alem da estatica.", "dica": "ASA = estatico + dinamico (ajusta eminencia e Bennett)."}, {"tema": "Arco Facial e Articuladores", "q": "Diferenca entre o ASA e o articulador tipo charneira simples (oclusor):", "a": ["Nenhuma", "O oclusor so abre/fecha (charneira); o ASA reproduz tambem movimentos excursivos ajustaveis", "O oclusor e mais preciso", "O ASA so faz abertura"], "c": 1, "com": "O articulador charneira (oclusor) realiza apenas movimento de abertura/fechamento, sem excursoes. O ASA reproduz movimentos laterais e protrusivos com ajustes, sendo superior para montagem oclusal.", "dica": "Charneira = so abre/fecha; ASA = mexe pros lados tambem."}, {"tema": "Arco Facial e Articuladores", "q": "O angulo de Bennett ajustado no ASA refere-se ao:", "a": ["Movimento de abertura", "Movimento lateral do condilo de balanceio (deslocamento medial do condilo de trabalho/movimento de Bennett)", "Plano de Camper", "EFL"], "c": 1, "com": "O angulo de Bennett descreve o componente do movimento lateral mandibular (deslocamento do condilo de balanceio). Ajusta-lo no ASA aproxima a dinamica do paciente.", "dica": "Bennett = movimento LATERAL (condilo de balanceio)."}, {"tema": "Arco Facial e Articuladores", "q": "A guia condilar (inclinacao da eminencia) ajustada no ASA influencia:", "a": ["A cor dos dentes", "A trajetoria protrusiva e, consequentemente, a altura de cuspides e profundidade da fossa na montagem", "A linha media", "O EFL"], "c": 1, "com": "A inclinacao da guia condilar determina o quanto a mandibula desce na protrusao, afetando a relacao entre cuspides na montagem (conceito de oclusao balanceada bilateral em PT).", "dica": "Guia condilar -> define cuspide/fossa na montagem."}, {"tema": "Arco Facial e Articuladores", "q": "A montagem do modelo superior no articulador, sem arco facial, costuma usar:", "a": ["A RC", "A platina/mesa de montagem media (montagem media), com perda de precisao individual", "O angulo de Bennett", "A regua de Fox"], "c": 1, "com": "Sem arco facial, usa-se uma montagem 'media' (mesa de orientacao), o que padroniza a posicao mas perde a individualizacao do eixo condilo-cranio do paciente.", "dica": "Sem arco facial = montagem 'media' (menos individual)."}, {"tema": "Arco Facial e Articuladores", "q": "O articulador totalmente ajustavel difere do ASA por:", "a": ["Ser mais simples", "Permitir registros individualizados mais completos dos movimentos (pantografia), maior precisao e maior complexidade/custo", "Nao reproduzir movimentos", "Nao ter ajuste de Bennett"], "c": 1, "com": "O articulador totalmente ajustavel reproduz com maior fidelidade as trajetorias condilares individuais (via registros pantograficos), as custas de complexidade e tempo. Em PT, o ASA costuma ser suficiente.", "dica": "Totalmente ajustavel = mais preciso, mais complexo."}, {"tema": "Arco Facial e Articuladores", "q": "A oclusao balanceada bilateral, objetivo classico em protese total, significa:", "a": ["Contato apenas anterior", "Contatos simultaneos de trabalho e balanceio em excursoes, estabilizando a protese durante a funcao", "Contato so de um lado", "Ausencia de contatos posteriores"], "c": 1, "com": "Em PT, busca-se que, ao excursionar, haja contatos bilaterais (lado de trabalho e de balanceio) para evitar o basculamento/deslocamento das bases - diferente do mutuamente protegido em dentados.", "dica": "PT = balanceada bilateral (estabiliza a base)."}, {"tema": "Arco Facial e Articuladores", "q": "Por que a oclusao mutuamente protegida (guia canina/anterior) NAO e o padrao em PT convencional?", "a": ["Porque e mais estetica", "Porque a desoclusao posterior desestabilizaria a base; sem dentes naturais, prefere-se contatos balanceados que estabilizem a protese", "Porque exige porcelana", "Porque aumenta a DVO"], "c": 1, "com": "Na guia canina, os posteriores desocluem nas excursoes; numa protese mucosossuportada isso causaria basculamento. Por isso opta-se por balanceada bilateral para manter as bases assentadas.", "dica": "Guia canina solta os fundos -> protese bascula. PT quer balanceada."}, {"tema": "Materiais dos Dentes", "q": "Dentes de PORCELANA sao CONTRAINDICADOS contra dentes naturais antagonistas porque:", "a": ["Quebram facilmente", "Causam abrasao severa do esmalte natural antagonista", "Mudam de cor", "Sao silenciosos"], "c": 1, "com": "A dureza da porcelana abrade rapidamente o esmalte dos dentes naturais opostos. Por isso, havendo antagonista natural (ou bruxismo), prefere-se resina acrilica.", "dica": "Porcelana e dura demais: lixa o dente natural."}, {"tema": "Materiais dos Dentes", "q": "Vantagens dos dentes de PORCELANA incluem:", "a": ["Facilidade de ajuste e silencio", "Estabilidade de cor a longo prazo, alta resistencia ao desgaste e bom polimento/estetica", "Uniao quimica a base de resina", "Nao se fraturam"], "c": 1, "com": "A porcelana mantem a cor e resiste ao desgaste, oferecendo estetica durável. Em contrapartida, e fragil ao impacto, ruidosa e une-se a base apenas mecanicamente.", "dica": "Porcelana: cor estavel + dura (mas barulhenta e fragil)."}, {"tema": "Materiais dos Dentes", "q": "Desvantagens dos dentes de PORCELANA incluem:", "a": ["Mudanca rapida de cor", "Uniao apenas MECANICA a base (pinos/retencoes), fragilidade ao impacto (lascamento) e ruido durante a mastigacao", "Desgaste rapido", "Facil ajuste oclusal"], "c": 1, "com": "A porcelana nao se une quimicamente a resina da base (depende de retencoes mecanicas/pinos), lasca sob impacto e produz som de batida. Ajuste oclusal e mais dificil.", "dica": "Porcelana: uniao mecanica, lasca e faz barulho."}, {"tema": "Materiais dos Dentes", "q": "Dentes de RESINA ACRILICA sao indicados quando ha:", "a": ["Necessidade de cor permanente", "Dentes naturais antagonistas ou bruxismo, por serem mais faceis de ajustar e nao abradarem o antagonista natural", "Necessidade de maxima dureza", "Apenas estetica"], "c": 1, "com": "A resina e menos abrasiva ao antagonista natural e mais facil de ajustar; une-se quimicamente a base de resina. E a escolha frente a dentes naturais ou parafuncao.", "dica": "Resina: gentil com o natural + facil de ajustar."}, {"tema": "Materiais dos Dentes", "q": "Vantagem importante da RESINA sobre a porcelana quanto a uniao com a base:", "a": ["Uniao apenas mecanica", "Uniao QUIMICA a base de resina acrilica, reduzindo descolamento", "Nao se une", "Une-se ao metal"], "c": 1, "com": "A resina dos dentes co-polimeriza/une-se quimicamente a base acrilica, diminuindo o risco de descolamento que ocorre com a porcelana (retida so mecanicamente).", "dica": "Resina cola QUIMICAMENTE na base."}, {"tema": "Materiais dos Dentes", "q": "Desvantagem da RESINA em relacao a porcelana:", "a": ["Abrade o antagonista natural", "Menor estabilidade de cor a longo prazo e maior desgaste, podendo levar a perda gradual de DVO", "Faz muito ruido", "E muito fragil ao impacto"], "c": 1, "com": "A resina desgasta mais e pode alterar a cor com o tempo, com risco de perda progressiva de DVO. Em compensacao, e silenciosa, ajustavel e une-se a base.", "dica": "Resina: desgasta e muda de cor com o tempo (perde DVO)."}, {"tema": "Materiais dos Dentes", "q": "Em paciente com BRUXISMO usando protese total contra dentes naturais inferiores, o material de eleicao para os dentes da protese e:", "a": ["Porcelana", "Resina acrilica (idealmente reforcada), para reduzir abrasao do antagonista e facilitar ajuste", "Metal", "Vidro"], "c": 1, "com": "Bruxismo + antagonista natural contraindicam porcelana (abrasao). Resina (preferencialmente reforcada/com maior resistencia ao desgaste) reduz o dano ao dente natural e permite ajustes oclusais.", "dica": "Bruxismo + dente natural = resina (nunca porcelana)."}, {"tema": "Materiais dos Dentes", "q": "Quanto ao RUIDO durante a mastigacao, comparando os materiais:", "a": ["Resina e mais ruidosa", "Porcelana e mais ruidosa (som de batida); resina e mais silenciosa", "Ambas igualmente silenciosas", "Ambas igualmente ruidosas"], "c": 1, "com": "O contato porcelana-porcelana produz som de batida (click), enquanto a resina amortece e e silenciosa - fator de conforto/aceitacao pelo paciente.", "dica": "Porcelana = 'tic-tic'; resina = silenciosa."}, {"tema": "Materiais dos Dentes", "q": "Os dentes posteriores podem ser classificados por sua morfologia oclusal em anatomicos, semianatomicos e nao anatomicos; os NAO anatomicos (0 graus) sao indicados quando:", "a": ["Ha rebordo alto e favoravel", "Ha rebordos reabsorvidos/desfavoraveis ou discrepancias, pois reduzem forcas laterais desestabilizadoras", "Deseja-se maxima estetica posterior", "Ha bruxismo leve"], "c": 1, "com": "Dentes sem cuspides (0 grau) geram menos componentes laterais de forca, favorecendo a estabilidade em rebordos reabsorvidos/classe II, as custas de menor eficiencia mastigatoria e estetica posterior.", "dica": "Rebordo ruim -> dente 0 grau (menos forca lateral)."}, {"tema": "Materiais dos Dentes", "q": "A inclinacao de cuspide dos dentes posteriores anatomicos (ex.: 30 graus) relaciona-se com:", "a": ["A cor", "A necessidade de harmonizar com a guia condilar para obter balanceio; cuspides altas exigem ajuste fino da curva e do articulador", "O EFL", "A linha media"], "c": 1, "com": "Cuspides mais altas aumentam eficiencia mastigatoria e travamento, mas geram mais forca lateral e exigem montagem balanceada precisa (compatibilizada com a guia condilar). Em rebordos ruins, preferem-se cuspides menores.", "dica": "Cuspide alta = mais eficiente, mais forca lateral, exige ajuste."}, {"tema": "Materiais dos Dentes", "q": "Sobre a selecao de material dos dentes, assinale a CORRETA:", "a": ["Porcelana e sempre superior", "A escolha depende do antagonista (natural x protese), parafuncao, estetica desejada e habilidade de ajuste necessaria", "Resina e proibida em PT", "So se usa porcelana em idosos"], "c": 1, "com": "Nao ha material universalmente melhor: pondera-se antagonista, bruxismo, estetica, ruido e facilidade de ajuste. Resina e versatil; porcelana brilha na estabilidade de cor quando ha protese antagonista.", "dica": "Decisao = antagonista + parafuncao + estetica."}, {"tema": "Materiais dos Dentes", "q": "Em uma protese total superior antagonizando OUTRA protese total inferior (sem dentes naturais), o uso de porcelana e:", "a": ["Contraindicado", "Aceitavel, pois nao havera abrasao de dente natural; pondera-se ruido e fragilidade", "Obrigatorio", "Impossivel"], "c": 1, "com": "Sem antagonista natural, a contraindicacao principal da porcelana (abrasao do esmalte) deixa de existir. Mantem-se a analise de ruido, fragilidade e estabilidade das bases.", "dica": "Protese contra protese: porcelana pode (sem dente natural pra lixar)."}, {"tema": "Montagem e Curvas", "q": "A curva de Spee e a curvatura observada no plano:", "a": ["Frontal (transversal)", "Sagital (antero-posterior), acompanhando as cuspides vestibulares dos posteriores", "Horizontal", "Oclusal apenas dos anteriores"], "c": 1, "com": "A curva de Spee e ântero-posterior (vista lateral), passando pelas cuspides vestibulares dos posteriores inferiores. Em PT, reproduzi-la ajuda no balanceio durante a protrusao.", "dica": "Spee = curva de PERFIL (antero-posterior)."}, {"tema": "Montagem e Curvas", "q": "A curva de Wilson e a curvatura observada no plano:", "a": ["Sagital", "Frontal/transversal (mediolateral), pela inclinacao vestibulolingual dos posteriores", "Horizontal", "Da guia condilar"], "c": 1, "com": "A curva de Wilson e transversal (vista frontal), resultante da inclinacao lingual das cuspides, contribuindo para o balanceio nas excursoes laterais.", "dica": "Wilson = curva de FRENTE (transversal)."}, {"tema": "Montagem e Curvas", "q": "A reproducao das curvas de Spee e Wilson em PT visa principalmente:", "a": ["Estetica anterior", "Obter contatos de balanceio (oclusao balanceada bilateral) que estabilizem a protese nas excursoes", "Aumentar a DVO", "Definir a linha media"], "c": 1, "com": "As curvas compensatorias permitem manter contatos no lado de balanceio durante protrusao e lateralidade, estabilizando as bases - objetivo central da oclusao balanceada em PT.", "dica": "Curvas = balanceio = base estavel."}, {"tema": "Montagem e Curvas", "q": "Na montagem dos incisivos superiores, a inclinacao e o posicionamento devem priorizar:", "a": ["Apenas a oclusao", "Estetica e fonetica (suporte labial, exposicao, sons labiodentais /f/ e /v/) alem do alinhamento com a linha media", "Maxima cuspide", "Curva de Wilson"], "c": 1, "com": "Os anteriores superiores tem papel estetico e fonetico dominante; sua posicao influencia suporte labial e sons /f/ /v/ (borda incisal toca o vermelhao do labio inferior). A oclusao anterior em PT e geralmente leve.", "dica": "Anteriores: estetica + fonetica (/f/ e /v/)."}, {"tema": "Montagem e Curvas", "q": "O teste fonetico com sons labiodentais /f/ e /v/ avalia:", "a": ["A DVO posterior", "O comprimento/posicao das bordas incisais superiores em relacao ao labio inferior", "A RC", "A curva de Spee"], "c": 1, "com": "Em /f/ e /v/, a borda incisal superior deve tocar levemente o vermelhao do labio inferior. Dentes longos demais ou mal posicionados alteram esses sons - guia de ajuste anterior.", "dica": "/f/ /v/: borda incisal toca o labio inferior."}, {"tema": "Montagem e Curvas", "q": "Os sons sibilantes /s/ /z/ na prova dos dentes avaliam principalmente:", "a": ["O suporte labial", "A relacao vertical e antero-posterior anterior (espaco de fala) e a posicao da lingua/dentes; ceceio sugere erro de posicionamento ou DVO", "A curva de Wilson", "O angulo de Bennett"], "c": 1, "com": "Os sibilantes exigem fluxo de ar controlado entre lingua e regiao anterior; ceceio (lisping) ou assobio indicam erro de DVO/posicao dos anteriores ou espessura inadequada da base.", "dica": "/s/ /z/: assobio/ceceio = erro de posicao/DVO anterior."}, {"tema": "Montagem e Curvas", "q": "Na montagem, o primeiro molar inferior costuma ser posicionado considerando:", "a": ["A linha media", "O plano oclusal, a relacao com o rebordo (sobre a crista) e a chave de oclusao com o antagonista para estabilidade", "A cor", "O angulo de Frankfurt"], "c": 1, "com": "Posicionar os posteriores sobre a crista do rebordo (e nao vestibularizados) e fundamental para estabilidade da protese, dirigindo as forcas mastigatorias ao eixo do rebordo.", "dica": "Posteriores sobre a CRISTA do rebordo (estabilidade)."}, {"tema": "Montagem e Curvas", "q": "Posicionar os dentes posteriores muito para vestibular em relacao a crista do rebordo tende a:", "a": ["Aumentar a estabilidade", "Gerar momento de alavanca/basculamento e instabilidade da base durante a funcao", "Melhorar a fonetica", "Reduzir o corredor bucal sempre"], "c": 1, "com": "Forcas aplicadas fora do eixo da crista criam alavancas que deslocam/basculam a base. Por isso, idealmente, as cuspides de suporte ficam sobre a crista do rebordo.", "dica": "Dente fora da crista = alavanca = protese solta."}, {"tema": "Fluxo Clinico", "q": "A sequencia clinica CORRETA na etapa de relacoes maxilomandibulares e aproximadamente:", "a": ["RC -> DVO -> arco facial -> ajuste do rodete superior", "Receber/avaliar bases -> ajustar rodete superior (estetica/planos) -> determinar DVO -> registrar RC -> transferir (arco facial + RC) -> montar dentes", "Montar dentes -> DVO -> RC -> bases", "Arco facial -> dentes -> bases -> DVO"], "c": 1, "com": "A logica e: garantir bases estaveis, definir o plano/estetica no rodete superior, estabelecer a DVO, registrar a RC, transferir ao articulador e so entao montar os dentes.", "dica": "Base -> superior(plano) -> DVO -> RC -> articulador -> dentes."}, {"tema": "Fluxo Clinico", "q": "Antes de registrar a DVO definitiva, e indispensavel que esteja correto:", "a": ["A cor dos dentes", "O plano de orientacao do rodete superior (estetica e paralelismo), pois ele baliza a oclusao", "O angulo de Bennett", "O material dos dentes"], "c": 1, "com": "O plano superior define a referencia estetica e oclusal; ajusta-se a DVO contra ele. Erros no plano superior propagam-se para DVO, RC e montagem.", "dica": "Plano superior certo antes de mexer na DVO."}, {"tema": "Fluxo Clinico", "q": "A prova dos dentes (try-in) em cera serve para avaliar, ANTES da acrilizacao:", "a": ["Apenas a cor", "Estetica, fonetica, DVO, linha media, oclusao em RC e aprovacao do paciente, permitindo correcoes", "Somente a RC", "Apenas a curva de Spee"], "c": 1, "com": "O try-in e a ultima oportunidade de corrigir estetica, fonetica, DVO e oclusao em cera antes da processamento. Inclui aprovacao do paciente, registrada idealmente por escrito.", "dica": "Try-in = ultima chance de corrigir tudo (e o paciente aprova)."}, {"tema": "Fluxo Clinico", "q": "Apos a acrilizacao, e comum ocorrer pequeno aumento da DVO devido a:", "a": ["Reabsorcao ossea", "Erros de processamento/expansao da resina e inclusao de particulas, exigindo remontagem e ajuste oclusal", "Mudanca de cor", "Aumento do EFL"], "c": 1, "com": "A polimerizacao pode introduzir discrepancias oclusais (aumento de DVO/contatos prematuros). A remontagem em articulador e o ajuste oclusal (desgaste seletivo) corrigem isso antes da entrega.", "dica": "Depois de acrilizar: remontar e ajustar a oclusao."}, {"tema": "Fluxo Clinico", "q": "O desgaste seletivo (ajuste oclusal) apos a remontagem visa:", "a": ["Mudar a cor", "Eliminar contatos prematuros e interferencias, restabelecendo contatos uniformes em RC e o balanceio nas excursoes", "Aumentar a DVO", "Trocar o material"], "c": 1, "com": "O ajuste oclusal seletivo remove contatos prematuros em RC e interferencias nas excursoes, restaurando estabilidade oclusal e balanceio - reduz trauma e basculamento da protese.", "dica": "Desgaste seletivo = tira prematuros e equilibra a oclusao."}, {"tema": "Fluxo Clinico", "q": "Na entrega da protese, orientacoes ao paciente devem incluir:", "a": ["Mastigar so de um lado", "Adaptacao gradual da fala/mastigacao, higiene, retorno para ajustes e expectativa de pontos de pressao iniciais", "Nunca remover a protese", "Usar porcelana sempre"], "c": 1, "com": "Orienta-se higiene, adaptacao progressiva, possiveis areas de pressao (ajustes em retornos) e cuidados; a aceitacao melhora com acompanhamento nas primeiras semanas.", "dica": "Entrega = orientar higiene, adaptacao e marcar retornos."}, {"tema": "Fluxo Clinico", "q": "Uma queixa de 'batida dos dentes ao falar' apos a entrega sugere, com maior probabilidade:", "a": ["Cor inadequada", "DVO aumentada (invasao do EFL)", "Corredor bucal estreito", "Curva de Wilson invertida"], "c": 1, "com": "Som de batida ao falar indica que a DVO esta excessiva (EFL reduzido), aproximando os dentes durante a fala. Reavalia-se a DVO e ajusta-se a oclusao.", "dica": "Batida ao falar = DVO alta (comeu o EFL)."}, {"tema": "Fluxo Clinico", "q": "Integrando os conceitos: o registro de RC sobre bases estaveis, com DVO correta, transferido por arco facial e montado em ASA, tem como objetivo final:", "a": ["Apenas estetica", "Reproduzir fielmente as relacoes maxilomandibulares do paciente no articulador para montar uma oclusao funcional, estavel e estetica", "Reduzir o tempo de trabalho", "Eliminar a prova dos dentes"], "c": 1, "com": "Toda a etapa visa transpor com fidelidade a posicao vertical (DVO) e horizontal (RC) e as referencias esteticas para o articulador, base de uma protese funcional, estavel e estetica.", "dica": "Objetivo: copiar o paciente para o articulador e montar bem."}];
+const FLASH = [["DVR", "Posicao postural de repouso: musculatura em tonus de equilibrio, sem contato dentario. Maior que a DVO."], ["DVO", "Altura do terco inferior da face com os dentes/rodetes em contato oclusal."], ["Formula da DVO", "DVO = DVR - EFL."], ["EFL", "Espaco interoclusal de repouso. Faixa fisiologica ~2-4 mm (referencia ~3 mm)."], ["Relacao Centrica (RC)", "Relacao articular pura (condilo-disco em antero-superior na fossa), independente dos dentes."], ["Metodo mais preciso de RC", "Grafico - arco gotico (tracado de Gysi); apice da seta = RC."], ["Funcao da fonetica na DV", "VERIFICAR a DVO (sons /s/, espaco de fala ~1 mm), nunca determinar."], ["Plano de Camper (lateral)", "Asa do nariz -> tragus; orienta o plano oclusal em perfil."], ["Plano bipupilar (frontal)", "Linha que une as pupilas; orienta o plano oclusal anterior na vista frontal."], ["Regua/garfo de Fox", "Confere o paralelismo do rodete superior com Camper (lateral) e bipupilar (frontal)."], ["Linha media", "Referencia: filtro labial. Coincide com a linha media dental em ~70% dos casos."], ["Linha dos caninos", "Marcada pela comissura labial em repouso / asa do nariz."], ["Linha do sorriso", "Define a exposicao gengival e a altura dos dentes anteriores ao sorrir."], ["Corredor bucal", "Espaco escuro lateral entre posteriores e bochecha. Amplo = +cera; Estreito = -cera."], ["Arco facial", "Transfere o MODELO SUPERIOR (eixo charneira/cranio) para o articulador."], ["ASA", "Articulador semi-ajustavel: reproduz relacoes estaticas E dinamicas (guia condilar + Bennett)."], ["Angulo de Bennett", "Componente do movimento LATERAL (condilo de balanceio)."], ["Porcelana", "Cor estavel, dura, durável; porem ruidosa, fragil ao impacto e une-se so mecanicamente. PROIBIDA contra dente natural (abrasao)."], ["Resina acrilica", "Facil ajuste, silenciosa, une-se quimicamente a base; porem desgasta e muda de cor (perde DVO). Indicada contra dente natural/bruxismo."], ["Curva de Spee", "Curvatura antero-posterior (perfil) - auxilia o balanceio na protrusao."], ["Curva de Wilson", "Curvatura transversal (frontal) - auxilia o balanceio nas lateralidades."], ["Oclusao em PT", "Balanceada bilateral (contatos de trabalho e balanceio) para estabilizar as bases."], ["Deglutição (RC)", "Reflexo fisiologico que posiciona a mandibula em RC."], ["Jig anterior", "Dispositivo mecanico que desocluI posteriores e relaxa a musculatura para registrar RC."], ["Primeira checagem das bases", "Adaptacao, retencao, estabilidade e rigidez antes de qualquer registro."], ["Exposicao do rodete em repouso", "~1-2 mm de borda sob o labio superior."], ["DVO aumentada", "Fadiga muscular, trauma da mucosa, batida de dentes ao falar, dentes muito expostos."], ["DVO diminuida", "Aspecto envelhecido, queilite angular, perda de suporte labial."], ["Sequencia clinica", "Bases -> rodete superior(plano/estetica) -> DVO -> RC -> arco facial + RC -> montar dentes."], ["Posteriores sobre a crista", "Reduz alavanca/basculamento e estabiliza a protese."]];
+const MAPAS = [{"titulo": "Dimensao Vertical", "central": "DIMENSAO VERTICAL", "ramos": [{"no": "DVR (Repouso)", "filhos": ["Postural, sem contato", "Tonus muscular em equilibrio", "MAIOR que a DVO"]}, {"no": "EFL", "filhos": ["Folga interoclusal em repouso", "~3 mm (faixa 2-4 mm)", "DVR - DVO = EFL"]}, {"no": "DVO (Oclusao)", "filhos": ["Dentes em contato", "DVO = DVR - EFL", "Alta: fadiga/batida", "Baixa: face envelhecida"]}, {"no": "Metodos", "filhos": ["Metrico (Willis)", "Fisiologico (repouso/deglutição)", "Fonetico = VERIFICA"]}]}, {"titulo": "Relacao Centrica (Dimensao Horizontal)", "central": "RELACAO CENTRICA", "ramos": [{"no": "Definicao", "filhos": ["Articular pura (condilo-disco-fossa)", "Antero-superior na fossa", "Independente dos dentes"]}, {"no": "Por que em PT?", "filhos": ["Sem dentes nao ha MIH", "Unica posicao reproduzivel"]}, {"no": "Metodos", "filhos": ["Manipulacao (charneira)", "Fisiologico (deglutição/lingua)", "Mecanico (jig de Lucia)", "Grafico = arco gotico (MAIS PRECISO)"]}, {"no": "Transferencia", "filhos": ["Registro RC monta o INFERIOR", "Bases estaveis + DVO correta"]}]}, {"titulo": "Planos e Linhas de Orientacao", "central": "ORIENTACAO ESTETICA/OCLUSAL", "ramos": [{"no": "Plano de Camper", "filhos": ["Lateral: asa do nariz -> tragus", "Orienta o plano oclusal em perfil", "~10-15 graus do Frankfurt"]}, {"no": "Plano bipupilar", "filhos": ["Frontal: une as pupilas", "Paralelo ao plano anterior"]}, {"no": "Regua de Fox", "filhos": ["Confere paralelismo", "Camper (lado) + bipupilar (frente)"]}, {"no": "Linhas esteticas", "filhos": ["Media = filtro labial (~70%)", "Caninos = comissura/asa do nariz", "Sorriso = exposicao gengival", "Corredor bucal = espaco lateral"]}]}, {"titulo": "Materiais dos Dentes", "central": "PORCELANA x RESINA", "ramos": [{"no": "Porcelana", "filhos": ["Cor estavel + dura/durável", "Ruidosa, fragil, uniao mecanica", "PROIBIDA contra dente natural"]}, {"no": "Resina", "filhos": ["Facil ajuste, silenciosa", "Uniao QUIMICA a base", "Desgasta/muda cor (perde DVO)", "Indicada: dente natural/bruxismo"]}, {"no": "Morfologia posterior", "filhos": ["Anatomico (cuspide alta): eficiente", "Nao anatomico (0 grau): rebordo ruim"]}, {"no": "Decisao", "filhos": ["Antagonista (natural x protese)", "Parafuncao", "Estetica + ruido + ajuste"]}]}, {"titulo": "Articuladores e Montagem", "central": "ARTICULADOR / MONTAGEM", "ramos": [{"no": "Arco facial", "filhos": ["Transfere modelo SUPERIOR", "Olivas no conduto auditivo", "Eixo charneira/cranio"]}, {"no": "ASA", "filhos": ["Estatico + dinamico", "Ajusta guia condilar", "Ajusta angulo de Bennett"]}, {"no": "Curvas", "filhos": ["Spee (antero-posterior)", "Wilson (transversal)", "= balanceio"]}, {"no": "Oclusao em PT", "filhos": ["Balanceada bilateral", "Posteriores sobre a crista", "Estabilidade das bases"]}]}, {"titulo": "Fluxo Clinico Integrado", "central": "SEQUENCIA CLINICA", "ramos": [{"no": "1. Bases", "filhos": ["Adaptacao/retencao", "Estabilidade/rigidez"]}, {"no": "2. Rodete superior", "filhos": ["Estetica (1-2 mm repouso)", "Planos (Fox/Camper/bipupilar)", "Linhas de orientacao"]}, {"no": "3. DVO e RC", "filhos": ["DVO = DVR - EFL", "RC (arco gotico/manipulacao)"]}, {"no": "4. Articulador e dentes", "filhos": ["Arco facial (superior)", "RC (inferior)", "Montagem + curvas", "Try-in -> acriliza -> ajuste"]}]}];
+const KEYS = ["A","B","C","D"];
+
+/* ---------- MAPAS ---------- */
+function renderMapas(){
+  const g = document.getElementById('mapgrid');
+  g.innerHTML = MAPAS.map(m=>{
+    const branches = m.ramos.map(r=>`
+      <div class="branch">
+        <span class="bno">${r.no}</span>
+        <div class="chips">${r.filhos.map(f=>`<span>${f}</span>`).join('')}</div>
+      </div>`).join('');
+    return `<div class="map"><h3>${m.titulo}</h3><span class="central">${m.central}</span>${branches}</div>`;
+  }).join('');
+}
+
+/* ---------- FLASHCARDS ---------- */
+let flashOrder = FLASH.map((_,i)=>i);
+function renderFlash(){
+  const g = document.getElementById('flashgrid');
+  g.innerHTML = flashOrder.map(i=>{
+    const [term,ans]=FLASH[i];
+    return `<div class="flip" data-i="${i}">
+      <div class="flip-in">
+        <div class="face front">
+          <div class="tag">Flashcard</div>
+          <div class="term">${term}</div>
+          <div class="hint">toque para revelar →</div>
+        </div>
+        <div class="face back"><div class="ans">${ans}</div></div>
+      </div></div>`;
+  }).join('');
+  document.querySelectorAll('.flip').forEach(c=>{
+    c.addEventListener('click',()=>c.classList.toggle('flipped'));
+  });
+  document.getElementById('fcount').textContent = FLASH.length + ' cartões';
+}
+function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+document.getElementById('shuffle').onclick=()=>{flashOrder=shuffle(FLASH.map((_,i)=>i));renderFlash();};
+document.getElementById('flipAll').onclick=()=>{document.querySelectorAll('.flip').forEach(c=>c.classList.add('flipped'));};
+document.getElementById('resetCards').onclick=()=>{document.querySelectorAll('.flip').forEach(c=>c.classList.remove('flipped'));};
+
+/* ---------- QUESTOES ---------- */
+let filtro = "Todos";
+let answered = {};   // idx -> chosen
+let hits = 0;
+const temas = ["Todos", ...Array.from(new Set(QUESTOES.map(q=>q.tema)))];
+
+function renderFilter(){
+  const f = document.getElementById('qfilter');
+  f.innerHTML = temas.map(t=>{
+    const n = t==="Todos"?QUESTOES.length:QUESTOES.filter(q=>q.tema===t).length;
+    return `<button class="fchip ${t===filtro?'active':''}" data-t="${t}">${t} <span style="opacity:.6">${n}</span></button>`;
+  }).join('');
+  f.querySelectorAll('.fchip').forEach(b=>b.onclick=()=>{filtro=b.dataset.t;renderFilter();renderQ();});
+}
+
+function updateScore(){
+  const ans = Object.keys(answered).length;
+  document.getElementById('hits').textContent = hits;
+  document.getElementById('answered').textContent = ans;
+  const pct = ans? Math.round(hits/ans*100):0;
+  document.getElementById('pct').textContent = pct + '%';
+  document.getElementById('trackfill').style.width = (ans/QUESTOES.length*100) + '%';
+}
+
+function renderQ(){
+  const list = document.getElementById('qlist');
+  const data = QUESTOES.map((q,i)=>({q,i})).filter(o=>filtro==="Todos"||o.q.tema===filtro);
+  if(!data.length){list.innerHTML='<div class="empty">Nenhuma questão neste filtro.</div>';return;}
+  list.innerHTML = data.map(({q,i})=>{
+    const opts = q.a.map((txt,oi)=>`
+      <button class="opt" data-q="${i}" data-o="${oi}">
+        <span class="key">${KEYS[oi]}</span><span>${txt}</span>
+      </button>`).join('');
+    return `<div class="qcard" id="q${i}">
+      <div class="qtop"><span class="qnum">Q${i+1}</span><span class="qtema">${q.tema}</span></div>
+      <div class="qtext">${q.q}</div>
+      <div class="opts">${opts}</div>
+      <div class="feedback" id="fb${i}">
+        <div class="fb-com"><b>Comentário:</b> ${q.com}</div>
+        <div class="fb-dica"><span class="ic">💡</span><span><b>Dica:</b> ${q.dica}</span></div>
+      </div>
+    </div>`;
+  }).join('');
+
+  list.querySelectorAll('.opt').forEach(btn=>{
+    const qi = +btn.dataset.q;
+    if(qi in answered){ lockCard(qi); }
+    btn.onclick=()=>{
+      if(qi in answered) return;
+      const chosen = +btn.dataset.o;
+      answered[qi]=chosen;
+      if(chosen===QUESTOES[qi].c) hits++;
+      lockCard(qi);
+      updateScore();
+    };
+  });
+}
+
+function lockCard(qi){
+  const card = document.getElementById('q'+qi);
+  if(!card) return;
+  const correct = QUESTOES[qi].c;
+  const chosen = answered[qi];
+  card.querySelectorAll('.opt').forEach(o=>{
+    const oi = +o.dataset.o;
+    o.disabled = true;
+    if(oi===correct) o.classList.add('correct');
+    else if(oi===chosen) o.classList.add('wrong');
+    else o.classList.add('dim');
+  });
+  document.getElementById('fb'+qi).classList.add('show');
+}
+
+document.getElementById('resetQ').onclick=()=>{answered={};hits=0;renderQ();updateScore();};
+
+/* ---------- TO TOP ---------- */
+const toTop=document.getElementById('toTop');
+window.addEventListener('scroll',()=>{toTop.classList.toggle('show',window.scrollY>600);});
+toTop.onclick=()=>window.scrollTo({top:0,behavior:'smooth'});
+
+/* INIT */
+renderMapas();renderFlash();renderFilter();renderQ();updateScore();
+</script>
+</body>
+</html>
